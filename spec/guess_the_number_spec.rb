@@ -15,5 +15,10 @@ describe 'Guess the number game' do
     it "should print an introduction" do
       expect(print_introduction).to eq "Hello, what is your name?"
     end
+    
+    it "should respond with your name when given" do 
+      expect(receive_name('Richard')).to eq  "Welcome Richard can you guess the number?"
+    end
+  
   end
 end
