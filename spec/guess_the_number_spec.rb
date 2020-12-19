@@ -39,7 +39,13 @@ describe 'Guess the number game' do
   context "function to check if number is higher or lower than guessed number" do 
     
     it "should return 'Congrats that is correct' if the number is correct" do 
-      expect(check_guess(10)).to eq 'Correct!'
+      num = 10
+      expect(check_guess(10, num)).to eq 'Correct!'
+    end
+    
+    it "should return 'higher' if the guessed number is lower than the number-to-guess" do
+      num = 10
+      expect(check_guess(5, num)).to eq 'Higher'
     end
   end
 end

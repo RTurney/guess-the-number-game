@@ -16,3 +16,9 @@ end
 def check_num(input)
   Integer(input) rescue "That's not a valid number"
 end
+
+def check_guess(user_input, num)
+  if user_input == num
+    return "Correct!"
+  end
+end
