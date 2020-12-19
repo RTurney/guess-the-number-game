@@ -37,15 +37,21 @@ describe 'Guess the number game' do
   end
   
   context "function to check if number is higher or lower than guessed number" do 
+  
+    it "should return 'thats not a valid number' when given an invalid input" do 
+      expect(check_guess('two', 10)).to eq "That's not a valid number"
+    end
     
     it "should return 'Congrats that is correct' if the number is correct" do 
-      num = 10
-      expect(check_guess(10, num)).to eq 'Correct!'
+      expect(check_guess('10', 10)).to eq 'Correct!'
     end
     
     it "should return 'higher' if the guessed number is lower than the number-to-guess" do
-      num = 10
-      expect(check_guess(5, num)).to eq 'Higher'
+      expect(check_guess('5', 10)).to eq 'Higher'
+    end
+  
+    it "should return 'lower' if the guessed number is higher than the number-to-guess" do 
+      expect(check_guess('15', 10)).to eq 'Lower'
     end
   end
 end
