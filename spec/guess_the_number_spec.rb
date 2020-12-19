@@ -9,4 +9,11 @@ describe 'Guess the number game' do
         expect(number_to_guess).to be_between(1,20).inclusive
     end
   end
+  
+  context "Introduction function" do 
+    
+    it "should print an introduction" do
+      expect(print_introduction).to eq "Hello, what is your name?"
+    end
+  end
 end
