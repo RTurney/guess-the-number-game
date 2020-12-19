@@ -19,6 +19,27 @@ describe 'Guess the number game' do
     it "should respond with your name when given" do 
       expect(receive_name('Richard')).to eq  "Welcome Richard can you guess the number?"
     end
+  end
   
+  context "check number function to return valid integer when given a number or return 'Thats not a number' otherwise" do 
+    
+    it "should return 1 when given '1' as string" do 
+      expect(check_num("1")).to eq 1
+    end
+    
+    it "should return 10 when given '10' as string" do 
+      expect(check_num('10')).to eq 10 
+    end
+    
+    it "should return 'thats not a valid number' when given an invalid a non-integer as string" do
+      expect(check_num('two')).to eq "That's not a valid number"
+    end
+  end
+  
+  context "function to check if number is higher or lower than guessed number" do 
+    
+    it "should return 'Congrats that is correct' if the number is correct" do 
+      expect(check_guess(10)).to eq 'Correct!'
+    end
   end
 end

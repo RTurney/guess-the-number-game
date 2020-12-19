@@ -12,3 +12,7 @@ end
 def receive_name(name)
   return "Welcome #{name} can you guess the number?"
 end
+
+def check_num(input)
+  Integer(input) rescue "That's not a valid number"
+end
