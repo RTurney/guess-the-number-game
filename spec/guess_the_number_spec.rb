@@ -17,7 +17,7 @@ describe 'Guess the number game' do
     end
     
     it "should respond with your name when given" do 
-      expect(receive_name('Richard')).to eq  "Welcome Richard can you guess the number?"
+      expect{receive_name('Richard')}.to output(/Welcome Richard can you guess the number?/).to_stdout  
     end
   end
   
@@ -52,6 +52,14 @@ describe 'Guess the number game' do
   
     it "should return 'lower' if the guessed number is higher than the number-to-guess" do 
       expect(check_guess('15', 10)).to eq 'Lower'
+    end
+  end
+
+  
+  context "running test example to understand stubbing user input" do 
+    it "should return the users name" do 
+      Object.any_instance.stub(gets: 'Richard')
+      expect(input_test).to eq "Richard"
     end
   end
 end

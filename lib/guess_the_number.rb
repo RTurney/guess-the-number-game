@@ -10,7 +10,7 @@ def print_introduction
 end 
 
 def receive_name(name)
-  return "Welcome #{name} can you guess the number?"
+  puts "Welcome #{name} can you guess the number?"
 end
 
 def check_num(input)
@@ -29,3 +29,26 @@ def check_guess(user_input, num)
     return "Lower"
   end
 end
+
+def input_test
+  name = gets.chomp
+  return name
+end
+
+def run_game
+  puts print_introduction
+  receive_name(gets.chomp)
+  number = number_to_guess
+  loop do 
+    result = check_guess(gets.chomp, number)
+    if result == 'Correct!'
+      puts result
+      puts "Game over"
+      break
+    else 
+      puts result
+    end
+  end
+end
+
+# run_game
