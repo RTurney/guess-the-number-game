@@ -4,5 +4,9 @@ require_relative 'random_number'
 require_relative 'introduction'
 # Project for 'guess the number' exercise in inventyourowngamesinpython book.
 class GuessingGame
-  
+
+  def run_game
+    puts "Guess a number"
+  end
+
 end

@@ -3,4 +3,11 @@ require 'guess_the_number'
 
 describe GuessingGame do
 
+  describe '.run_game' do
+    it 'will output instructions' do
+      expect{ subject.run_game }.to output{ 'Guess a number' }.to_stdout
+    end
+
+    it 'will '
+  end
 end

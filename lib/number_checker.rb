@@ -1,10 +1,6 @@
 # class for checking numbers
 class NumberChecker
 
-  def check_num(input)
-    Integer(input) rescue "That's not a valid number"
-  end
-
   def check_guess(user_input, num)
     user_input = check_num(user_input)
     if user_input == "That's not a valid number"
@@ -16,5 +12,10 @@ class NumberChecker
     elsif user_input > num
       return "Lower"
     end
+  end
+
+  private #--------------------------
+  def check_num(user_input)
+    Integer(user_input) rescue "That's not a valid number"
   end
 end
