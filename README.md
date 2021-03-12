@@ -4,6 +4,14 @@ This is a game from the 'build your own computer games in python book'. I have d
 
 The current instructions for this game is for the player to guess a number between 1 - 20.
 
+## Instructions:
+
+To play this game run:
+```
+irb -r '.lib/guess_the_number'
+```
+When you are ready to finish with the game run `quit`
+
 ## User stories
 ```
 As a player,
@@ -35,3 +43,15 @@ As a player,
 So that I can get closer to the number,
 I would like to be told if my guess is too high or too low.
 ```
+### Developer Notes:
+
+I have come back to this after a while of not working on it. I will want to refactor alot of the functions here as well as add tests for user inputs, stubbing other classes etc.
+
+
+### Tests:
+
+I need to read through all the tests to see what tests I have and why.
+
+Currently there are 9 tests across 5 suites. I need to add test coverage gem.
+
+<img src="public/Tests.png">
